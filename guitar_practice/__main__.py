@@ -82,7 +82,7 @@ def export_to_mp3(waveform: np.ndarray, sample_rate: int, output_path: str, bitr
         audio_tensor = torch.from_numpy(waveform).float()
 
         # Use Demucs's save_audio for proper float32 → MP3 conversion
-        save_audio(audio_tensor, output_path, sample_rate, bitrate_compression=bitrate)
+        save_audio(audio_tensor, output_path, sample_rate, bitrate=bitrate)
 
         console.print(f"[green]✓ Saved to {output_path}[/green]")
 
