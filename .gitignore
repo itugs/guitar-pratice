@@ -1,0 +1,16 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+*.egg-info/
+.pytest_cache/
+
+# Test outputs
+*.mp3
+*.wav
+
+# OS
+.DS_Store
+
+# Temp
+/var/

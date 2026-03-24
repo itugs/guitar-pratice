@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "guitar-practice"
+version = "0.1.0"
+description = "AI-powered guitar isolation tool for practice"
+readme = "README.md"
+requires-python = ">=3.8"
+authors = [
+    {name = "Jeff Jung", email = "jeff.jung@example.com"}
+]
+dependencies = [
+    "yt-dlp>=2024.0.0",
+    "demucs>=4.0.0",
+    "torch>=2.0.0",
+    "torchaudio>=2.0.0",
+    "pydub>=0.25.1",
+    "pyrubberband>=0.3.0",
+    "click>=8.0.0",
+    "rich>=13.0.0",
+    "librosa>=0.10.0",
+    "soundfile>=0.12.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-mock>=3.10.0",
+]
+
+[project.scripts]
+guitar-practice = "guitar_practice.__main__:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
