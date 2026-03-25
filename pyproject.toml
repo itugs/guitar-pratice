@@ -35,6 +35,10 @@ dev = [
 [project.scripts]
 guitar-practice = "guitar_practice.__main__:main"
 
+[tool.setuptools.packages.find]
+where = ["."]
+exclude = ["spike_output*", "scripts*"]
+
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 python_files = ["test_*.py"]
