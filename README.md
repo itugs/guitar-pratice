@@ -21,7 +21,7 @@ AI-powered guitar isolation tool for practice. Extract guitar tracks from YouTub
 
 **Optional:**
 - NVIDIA GPU with CUDA (8GB+ VRAM) for faster processing
-- Apple Silicon Mac (M1/M2) also supports GPU acceleration
+- Apple Silicon Mac (M1/M2/M3/M4) also supports GPU acceleration
 
 ### Install from source
 
@@ -63,7 +63,7 @@ Options:
 
 Processing time depends on hardware:
 
-- **M1/M2 Mac or NVIDIA GPU**: 1-2 minutes per song
+- **Apple Silicon (M1/M2/M3/M4) or NVIDIA GPU**: 1-2 minutes per song
 - **CPU only**: 5-10 minutes per song
 
 First run downloads the Demucs model (~2GB), subsequent runs use cached model.
