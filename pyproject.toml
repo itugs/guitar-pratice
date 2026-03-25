@@ -7,7 +7,7 @@ name = "guitar-practice"
 version = "0.1.0"
 description = "AI-powered guitar isolation tool for practice"
 readme = "README.md"
-requires-python = ">=3.8"
+requires-python = ">=3.8,<3.12"
 authors = [
     {name = "Jeff Jung", email = "jeff.jung@example.com"}
 ]
@@ -22,6 +22,8 @@ dependencies = [
     "rich>=13.0.0",
     "librosa>=0.10.0",
     "soundfile>=0.12.0",
+    "basic-pitch~=0.3.0",
+    "music21~=9.1.0",
 ]
 
 [project.optional-dependencies]
