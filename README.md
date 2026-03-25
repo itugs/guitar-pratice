@@ -61,7 +61,7 @@ Options:
   --speed FLOAT           Playback speed (0.25-4.0, default: 1.0)
   --bitrate INT           MP3 bitrate in kbps (default: 192)
   --sheet PATH            Generate sheet music PDF at this path
-  --max-duration INT      Max audio duration for sheet generation in seconds (default: 300)
+  --max-duration INT      Max audio duration for sheet generation in seconds (default: 600)
   --keep-temp             Keep temporary files for debugging
   --help                  Show this message and exit
 ```

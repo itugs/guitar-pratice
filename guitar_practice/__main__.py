@@ -149,7 +149,7 @@ def export_to_mp3(waveform: np.ndarray, sample_rate: int, output_path: str, bitr
 @click.option('--speed', type=float, default=1.0, help='Playback speed (0.25-4.0, default: 1.0)')
 @click.option('--bitrate', type=int, default=192, help='MP3 bitrate in kbps (default: 192)')
 @click.option('--sheet', type=click.Path(), default=None, help='Generate sheet music PDF at this path')
-@click.option('--max-duration', type=int, default=300, help='Max audio duration for sheet generation (seconds, default: 300)')
+@click.option('--max-duration', type=int, default=600, help='Max audio duration for sheet generation (seconds, default: 600)')
 @click.option('--keep-temp', is_flag=True, help='Keep temporary files for debugging')
 def main(input: str, output: str, speed: float, bitrate: int, sheet: str, max_duration: int, keep_temp: bool):
     """
