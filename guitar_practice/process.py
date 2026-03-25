@@ -14,9 +14,16 @@ console = Console()
 def check_rubberband() -> None:
     """Check if RubberBand library is installed, raise with install hint if missing."""
     try:
-        # Try importing pyrubberband - it will fail if RubberBand C++ lib is missing
-        pyrb.pyrb.get_rubberband_version()
-    except Exception:
+        # Check if rubberband binary is available
+        result = subprocess.run(
+            ['rubberband', '--version'],
+            capture_output=True,
+            text=True,
+            timeout=5
+        )
+        if result.returncode != 0:
+            raise RuntimeError("rubberband command failed")
+    except (FileNotFoundError, subprocess.TimeoutExpired, RuntimeError):
         system = platform.system()
         if system == "Darwin":
             hint = "brew install rubberband"
