@@ -61,7 +61,7 @@ def midi_to_sheet_music(midi_path: str, output_pdf_path: str) -> None:
         actual_pdf.rename(output_pdf_path)
 
         # Clean up .ly source if it exists
-        ly_source = Path(str(temp_base) + '.pdf')  # The .ly file music21 created
+        ly_source = Path(temp_base)  # The .ly file music21 created (no extension)
         if ly_source.exists() and ly_source != Path(output_pdf_path):
             ly_source.unlink()
 
