@@ -8,6 +8,8 @@ __pycache__/
 # Test outputs
 *.mp3
 *.wav
+*.pdf
+*.txt
 
 # OS
 .DS_Store
